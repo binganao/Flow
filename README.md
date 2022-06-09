@@ -40,3 +40,43 @@ telegram:
 
 ### subfinder
 
+> [Subfinder](https://github.com/projectdiscovery/subfinder) is a subdomain discovery tool that discovers valid subdomains for websites by using passive online sources. It has a simple modular architecture and is optimized for speed. subfinder is built for doing one thing only - passive subdomain enumeration, and it does that very well.
+
+配置文件参考
+
+```
+binaryedge: 
+  - lsnflksnfklfnesklfse
+censys: []
+certspotter: []
+chaos: []
+dnsdb: []
+github: []
+intelx: []
+passivetotal: []
+robtex: []
+securitytrails: []
+shodan: []
+spyse: []
+threatbook: []
+urlscan: []
+virustotal: []
+zoomeye: []
+zoomeyeapi: []
+fofa: []
+fullhunt: []
+```
+
+## 参考
+
+[https://github.com/projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder)
+
+[https://github.com/projectdiscovery/nuclei](https://github.com/projectdiscovery/nuclei)
+
+[https://github.com/projectdiscovery/naabu](https://github.com/projectdiscovery/naabu)
+
+[https://github.com/projectdiscovery/httpx](https://github.com/projectdiscovery/httpx)
+
+[https://github.com/projectdiscovery/notify](https://github.com/projectdiscovery/notify)
+
+https://github.com/chaitin/xray
