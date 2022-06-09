@@ -4,6 +4,8 @@ Flow 是一款基于 Docker 搭建的自动化 SRC 工作流，目前它包含�
 
 > 注：可以自行添加 xscan 开启自动化 XSS 漏洞挖掘能力
 
+![banner](./doc/banner.png)
+
 ## 快速上手
 
 ```
