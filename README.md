@@ -20,3 +20,23 @@ vim targets.txt
 docker-compose up
 ```
 
+## 配置
+
+Flow 默认包含了两个配置文件：`notify.yaml`、`subfinder.yaml` 
+
+### notify
+
+> [Notify](https://github.com/projectdiscovery/notify) is a Go-based assistance package that enables you to stream the output of several tools (or read from a file) and publish it to a variety of supported platforms.
+
+配置文件参考（使用 tg 推送）
+
+```
+telegram:
+  - id: "tel"
+    telegram_api_key: ""
+    telegram_chat_id: ""
+    telegram_format: "{{data}}"
+```
+
+### subfinder
+
