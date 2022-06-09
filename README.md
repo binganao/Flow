@@ -13,7 +13,8 @@ cd Flow
 
 # 配置子域名发现
 vim domains.txt
-# 配置目标
+
+# 配置目标 （不进行子域名发现）
 vim targets.txt
 
 # 启动 Flow
@@ -65,6 +66,36 @@ zoomeye: []
 zoomeyeapi: []
 fofa: []
 fullhunt: []
+```
+
+## 自行构建
+
+为了增加 Flow 的能力，可自行构建 Docker 镜像
+
+```
+cd Flow
+# 例如 xxx/flow:0.0.6
+docker build -t xxx/flow:0.0.x .
+```
+
+配置 docker-compose.yml
+
+```
+version: '2'
+
+services:
+  flow:
+    image: xxx/flow:0.0.x
+    container_name: FLOW
+    environment:
+      - 'TZ="Asia/Shanghai"'
+    volumes:
+      - ./targets.txt:/script/targets.txt
+      - ./domains.txt:/script/domains.txt
+      - ./dict/sub-dict.txt:/script/dict/sub-dict.txt
+      - ./config/subfinder.yaml:/root/.config/subfinder/provider-config.yaml
+      - ./config/notify.yaml:/root/.config/notify/provider-config.yaml
+    command: sh -c "./auto.sh"
 ```
 
 ## 参考
