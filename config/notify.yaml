@@ -1,0 +1,5 @@
+telegram:
+  - id: "tel"
+    telegram_api_key: ""
+    telegram_chat_id: ""
+    telegram_format: "{{data}}"

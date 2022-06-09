@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  flow:
+    image: bingan/flow:0.0.5
+    container_name: FLOW
+    environment:
+      - 'TZ="Asia/Shanghai"'
+    volumes:
+      - ./targets.txt:/script/targets.txt
+      - ./domains.txt:/script/domains.txt
+      - ./dict/sub-dict.txt:/script/dict/sub-dict.txt
+      - ./config/subfinder.yaml:/root/.config/subfinder/provider-config.yaml
+      - ./config/notify.yaml:/root/.config/notify/provider-config.yaml
+    command: sh -c "./auto.sh"
